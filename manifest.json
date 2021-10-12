@@ -1,7 +1,7 @@
 {
-    "name": "#Practica1",
-    "short_name": "#Practica1",
-    "description": "Esta es una página PWA",
+    "name": "Sport Health",
+    "short_name": "SH",
+    "description": "Esta es una página PWA conocida como Sport Health",
     "background_color": "#737373",
     "theme_color": "#004aad",
     "orientation": "portrait",
