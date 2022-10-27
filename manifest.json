@@ -19,13 +19,6 @@
             "sizes": "512x512",
             "type": "image/png"
         },
-
-        {
-            "src": "./img/114.png",
-            "sizes": "256x256",
-            "type": "image/png"
-        },
-
         {
             "src": "./img/87.png",
             "sizes": "128x128",
