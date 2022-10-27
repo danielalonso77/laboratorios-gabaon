@@ -23,22 +23,8 @@
             "src": "./img/87.png",
             "sizes": "128x128",
             "type": "image/png"
-        },
-
-        {
-            "src": "./img/80.png",
-            "sizes": "64x64",
-            "type": "image/png"
-        },
-        {
-            "src": "./img/60.png",
-            "sizes": "32x32",
-            "type": "image/png"
-        },
-        {
-            "src": "./img/29.png",
-            "sizes": "16x16",
-            "type": "image/png"
         }
+
+     
     ]
 }
