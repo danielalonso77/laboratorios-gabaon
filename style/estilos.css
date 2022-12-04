@@ -4,16 +4,17 @@ body {
   }
   
   .topnav {
-    overflow: hidden;
-    background-color: #737373;
-    position: sticky;
-    top: 0;
+    color: #737373;
+    background-color: #2759a8;
+    position: fixed;
   }
+
+
   
   .topnav a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: black ;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -21,8 +22,10 @@ body {
   }
   
   .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #2b548d;
+    color:white;
+    border: #004aad;
+    border-radius: 5px;
   }
   
   .topnav a.active {
@@ -33,6 +36,7 @@ body {
   .topnav .icon {
     display: none;
   }
+
   .form{
     width: fit-content;
     padding:16px;
@@ -43,6 +47,18 @@ body {
     width: 100%;
     height: 100%;
 
+  }
+
+  .footer{
+    padding-block: 50px;
+
+  }
+
+  .footer_container{
+    background-color: #2759a8;
+    max-width: 1160px;
+    margin: auto;
+    padding: 0 20px;
   }
   
   @media screen and (max-width: 600px) {
