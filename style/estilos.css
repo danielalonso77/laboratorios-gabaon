@@ -1,28 +1,30 @@
-body {
+body, p, h1, h2 , h3 {
+    
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font: 1em sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #000;
   }
   
   .topnav {
-    color: #737373;
-    background-color: #2759a8;
-    position: fixed;
+    color: white;
+    background-color: whitesmoke;
+    position: sticky;
+    content: justify;
   }
 
-
-  
   .topnav a {
     float: left;
     display: block;
     color: black ;
     text-align: center;
-    padding: 14px 16px;
+   
     text-decoration: none;
     font-size: 17px;
   }
   
   .topnav a:hover {
-    background-color: #2b548d;
+    background-color: #2759a8;
     color:white;
     border: #004aad;
     border-radius: 5px;
@@ -55,10 +57,46 @@ body {
   }
 
   .footer_container{
-    background-color: #2759a8;
+    background-color: #24abe3;
     max-width: 1160px;
     margin: auto;
     padding: 0 20px;
+  }
+
+  .footer_title {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .footer_top{
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    row-gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+  }
+
+  .footer_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer_list li {
+    margin-bottom: 10px;
+  }
+
+  .footer_list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .footer_list li a:hover {
+    color: #2b548d;
   }
   
   @media screen and (max-width: 600px) {
