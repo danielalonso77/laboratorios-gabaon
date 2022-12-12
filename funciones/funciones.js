@@ -1,29 +1,13 @@
-/*if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js')
-    .then(reg => console.log('Registro de SW exitoso', reg))
-    .catch(err => console.warn('Error al tratar de registrar el sw', err))
-}
+import { guardarFormulario, traerMensajes } from "./firebase.js";
 
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }*/
-import { guardarFormulario } from "./firebase.js";
-
-window.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM cargado");
+window.addEventListener("DOMContentLoaded", async () => {
+  const mensajes = await traerMensajes();
 });
 
 const contactForm = document.getElementById("contact-form");
-const formDiv = document.getElementById("formulario");
 
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log("Formulario enviado");
 
   const nombre = contactForm["nombre"];
   const apellido = contactForm["apellido"];
@@ -41,13 +25,11 @@ contactForm.addEventListener("submit", (e) => {
     mensaje.value
   );
 
-  $("#formulario").hide();
   swal({
     title: "Mensaje enviado!",
     text: "Gracias por contactarnos, nos comunicaremos a la brevedad.",
     icon: "success",
     button: "Aceptar",
-  })
+  });
   contactForm.reset();
-  $("#formulario").show();
 });
