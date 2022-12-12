@@ -36,7 +36,7 @@
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"><i class="fi fi-br-menu-burger"></i></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color: black;">
@@ -217,33 +217,38 @@
     </div>
   </div>
 
+</div>
+<div class="b-exampler-divider"></div>
+
+<hr>
+
   <!-- formuñario de contacto -->
-  <div class="container">
+  <div class="container" id="formulario">
     <form id="contact-form" class="form-control">
       <div class="row">
         <div class="col">
-          <input type="text" class="form-control" placeholder="Nombre">
+          <input type="text" class="form-control" id="nombre" placeholder="Nombre">
         </div>
         <div class="col">
-          <input type="text" class="form-control" placeholder="Apellido">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Correo">
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Teléfono">
+          <input type="text" class="form-control" id="apellido" placeholder="Apellido">
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <input type="text" class="form-control" placeholder="Asunto">
+          <input type="text" class="form-control" id="email" placeholder="Correo">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" id="phone" placeholder="Teléfono">
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje"></textarea>
+          <input type="text" class="form-control" id="asunto" placeholder="Asunto">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <textarea class="form-control" id="mensaje" rows="3" placeholder="Mensaje"></textarea>
         </div>
       </div>
       <div class="row">
@@ -306,93 +311,18 @@
 
 </body>
 <script src="https://clinica-gabaon-default-rtdb.firebaseio.com/">
+  
 </script>
-<script src="funciones/funciones.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="module" src="./funciones/funciones.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
   integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyBpVtwr9pLnXvHtTwiKI1yqgU8UwC4wcOc",
-    authDomain: "clinica-gabaon.firebaseapp.com",
-    projectId: "clinica-gabaon",
-    storageBucket: "clinica-gabaon.appspot.com",
-    messagingSenderId: "931316334250",
-    appId: "1:931316334250:web:13cf7185cbf15246e69ad3",
-    measurementId: "G-XRYH5HENBT"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-
-  var messages = firebase.database().ref('messages');
-  document.getElementById('contactForm').addEventListener('submit', submitForm);
-
-  (e) => {
-    e.preventDefault();
-    console.log(123);
-  }
-
-  //get values
-  function submitForm(e) {
-    e.preventDefault();
-    var name = getInputVal('name');
-    var company = getInputVal('company');
-    var email = getInputVal('email');
-    var phone = getInputVal('phone');
-    var message = getInputVal('message');
-    console.log(name);
-    console.log(company);
-    console.log(email);
-    console.log(phone);
-    console.log(message);
-
-
-    //save message
-    saveMessage(name, company, email, phone, message);
-
-    //show alert
-    document.querySelector('.alert').style.display = 'block';
-
-    //hide alert after 3 seconds
-    setTimeout(function () {
-      document.querySelector('.alert').style.display = 'none';
-    }, 3000);
-
-    //clear form
-    document.getElementById('contactForm').reset();
-  }
-
-  // Function to get form values
-  function getInputVal(id) {
-            return document.getElementById(id).value;
-        }
-
-
-  //save messages to firebase
-  function saveMessage(name, company, email, phone, message) {
-    var newMessageRef = messages.push();
-    newMessageRef.set({
-      name: name,
-      company: company,
-      email: email,
-      phone: phone,
-      message: message
-    });
-  }
-
+<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
 </script>
 
 
