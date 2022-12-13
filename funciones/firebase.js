@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
-import { getDoc, doc, getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js'
+import { getDocs, doc, getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -34,15 +34,8 @@ export const guardarFormulario = (nombre, apellido, email, phone, asunto, mensaj
     });
   }
 
-export const traerMensajes = () => {
-    getDoc(collection(db, "contacto")).then((doc) => {
-        if (doc.exists()) {
-            console.log("Document data:", doc.data());
-        } else {
-            // doc.data() will be undefined in this case
-            console.log("No such document!");
-        }
-    }).catch((error) => {
-        console.log("Error getting document:", error);
-    });
-}
+export const getContacto = () => getDocs(collection(db, "contacto"));
+
+export const eliminarContacto = () => console.log("eliminando");
+
+export const editarContacto = () => console.log("editando");
