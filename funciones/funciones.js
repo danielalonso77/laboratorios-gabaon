@@ -1,8 +1,12 @@
-import { guardarFormulario, getContacto, editarContacto, eliminarContacto } from "./firebase.js";
+import {
+  guardarFormulario,
+  getContacto,
+  editarContacto,
+  eliminarContacto,
+} from "./firebase.js";
 
 const contacto = document.getElementById("mensajes-container");
-
-
+/*
 window.addEventListener("DOMContentLoaded", async () => {
   const querySnapshot = await getContacto();
 
@@ -13,7 +17,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   querySnapshot.forEach((doc) => {
     const contacto = doc.data();
-    
+
     html += `
         <div class="card">
             <div class="card-body">
@@ -24,8 +28,8 @@ window.addEventListener("DOMContentLoaded", async () => {
                 <h6 class="card-subtitle mb-2 text-muted">${contacto.asunto}</h6>
                 <p class="card-text">${contacto.mensaje}</p>
                 <div>
-                    <button class="btn btn-danger" onclick="eliminarContacto()">Eliminar</button>
-                    <button class="btn btn-warning" onclick="editarContacto()">Editar</button>
+                    <button class="btn btn-warning" onclick="eliminarContacto()">Archivar</button>
+                    <button class="btn btn-success" onclick="editarContacto()">Leido</button>
                 </div>
             </div>
         </div>
@@ -33,10 +37,8 @@ window.addEventListener("DOMContentLoaded", async () => {
   });
 
   contacto.innerHTML = html;
-
-  
 });
-
+*/
 const contactForm = document.getElementById("contact-form");
 
 contactForm.addEventListener("submit", (e) => {
