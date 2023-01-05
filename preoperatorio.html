@@ -1,52 +1,338 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Collecting Data</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bienvenid@s">
+  <meta name="theme-color" content="#004aad">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="shortcut icon" type="image/png" href="./assets/logo.png">
+  <link rel="apple-touch-icon" href="./img/29.png">
+  <link rel="apple-touch-startup-image" href="./29.png">
+  <link rel="manifest" href="./manifest.json">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+  <link rel="stylesheet" href="style/estilos.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+  <title>Gabaon | Laboratorios clínicos</title>
 </head>
 
-<body class="container" style="margin-top: 50px;
-    width: 50%; height:auto;">
+<body>
 
-    <h2 class="text-primary" style="margin-left: 15px; margin-bottom: 10px">
-        Hey There,Help Us In Collecting Data
-    </h2>
+  <!-- Nav Bar  -->
 
-    <form class="container" id="contactForm">
-        <div class="card">
-            <div class="card-body">
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">
-                        Enter Your Name
-                    </label>
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top topnav">
+    <a class="navbar-brand" href="/index.html"><img src="img/logo_gabaon_ink.svg" alt="logo" width="300px"
+        height="100px"></a>
 
-                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">
-                        Email address
-                    </label>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color: black;">
+      <ul class="navbar-nav mr-auto">
+        <li> </li>
+        <li class="nav-item dropdown">
 
-                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary" style="margin-left: 15px; margin-top: 10px">
-                Submit
-            </button>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Nosotros
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/nosotros.html">Cultura</a>
+            <a class="dropdown-item" href="/historia.html">Historia</a>
+
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Servicios
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/sanguineo.html">Química Sanguínea 10 elementos</a>
+            <a class="dropdown-item" href="/glucosa.html">Bioquimica Clínica</a>
+            <a class="dropdown-item" href="/orina.html">Biometria Completa</a>
+            <a class="dropdown-item" href="/ultrasonido">Ultrasonido</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Paquetes
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a href="/basico" class="dropdown-item">Paquete Básico</a>
+            <a class="dropdown-item" href="/prenupcial">Paquete Prenupcial</a>
+            <a class="dropdown-item" href="/preventivo">Paquete Preventivo</a>
+            <a class="dropdown-item" href="/prenupcial-plus">Paquete Prenupcial Plus</a>
+            <a href="/adulto" class="dropdown-item">Paquete Adulto</a>
+            <a href="/renal" class="dropdown-item">Paquete Renal</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Covid-19
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Prueba</a>
+            <a class="dropdown-item" href="#">Resultados</a>
+            <a class="dropdown-item" href="#">Citas
+
+            </a>
+          </div>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit">Buscar</button>
+      </form>
+    </div>
+  </nav>
+
+  <nav class="nav">
+    <img src="/assets/baner.png" width="100%" height="15rem" alt="" sizes="" srcset="">
+  </nav>
+
+  <!-- End Nav Bar  -->
+
+  <br><br>
+  <hr>
+
+  <!-- Comienza carrusel -->
+  <div class="container">
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="assets/100.png" alt="First slide">
         </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="assets/124.png" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="assets/150.png" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="assets/289.png" alt="Fourth slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="assets/350.png" alt="Fifth slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      </dv>
+    </div>
+  </div>
+
+
+  <!-- Termina carrusel -->
+  <br><br><br><br>
+
+
+
+  <!-- Comienza cards -->
+  <div class="container-fluid ">
+    <div class="row">
+
+      <div class="col">
+        <div class="card card-body">
+          <img class="card-img-top" src="assets/157.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Quimica Sanguinea <br> 3</h5>
+
+            <a href="#" class="btn btn-primary">Más información</nav></a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col">
+        <div class="card card-body">
+          <img class="card-img-top" src="assets/QuímicaS10.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Química sanguinea con <br> 10 elementos</h5>
+
+            <a href="#" class="btn btn-primary">Más información</nav></a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col">
+        <div class="card card-body">
+          <img class="card-img-top" src="assets/bioquimica.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Bioquímica <br> Clínica</h5>
+
+            <a href="#" class="btn btn-primary">Más información</nav></a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <br><br>
+
+  <!-- Termina cards -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-auto">
+        <img src="/assets//cards/6.png" alt="" class="card-img-top">
+      </div>
+      <div class="col-auto">
+        <img src="/assets//cards/7.png" alt="" class="card-img-top">
+      </div>
+      <div class="col-auto">
+        <img src="/assets//cards/8.png" alt="" class="card-img-top">
+      </div>
+      <div class="col-auto">
+        <img src="/assets//cards/9.png" alt="" class="card-img-top">
+      </div>
+      <div class="col-auto">
+        <img src="/assets//cards/10.png" alt="" class="card-img-top">
+      </div>
+      <div class="col-auto">
+        <img src="/assets//cards/11.png" alt="" class="card-img-top">
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="b-exampler-divider"></div>
+
+<hr>
+
+  <!-- formuñario de contacto -->
+  <div class="container" id="formulario">
+    <form id="contact-form" class="form-control">
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" id="email" placeholder="Correo">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" id="phone" placeholder="Teléfono">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" id="asunto" placeholder="Asunto">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <textarea class="form-control" id="mensaje" rows="3" placeholder="Mensaje"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+      </div>
     </form>
+  </div>
 
-    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
-    </script>
 
-   
+
+  <br><br><br><br>
+
+  <!-- tarjetas de mensajes  -->
+  <div class="mensajes-container" id="mensajes-container">
+    <div class="row">
+      <div class="col">
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="b-exampler-divider"></div>
+
+  <hr>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <img src="/assets/logo.png" alt="" class="card-img-top">
+        </div>
+        <div class="col">
+          <h5>Información</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary" href="#">Bolsa de trabajo</a></li>
+            <li><a class="link-secondary" href="#">FAQ</a></li>
+            <li><a class="link-secondary" href="#">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h5>Redes Sociales</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary" href="https://www.facebook.com/Laboratorios-Cl%C3%ADnicos-Gaba%C3%B3n-106498432326864">Facebook</a></li>
+            <li><a class="link-secondary" href="#">Instagram</a></li>
+            <li><a class="link-secondary" href="#">Tiktok</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h5>Legal</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary" href="#">Terminos y condiciones</a></li>
+            <li><a class="link-secondary" href="#">Area legal</a></li>
+            <li><a class="link-secondary" href="#">Copyright</a></li>
+          </ul>
+        </div>
+
+
+      </div>
+  </footer>
+
+  </div>
+
 </body>
+<script src="https://clinica-gabaon-default-rtdb.firebaseio.com/">
+  
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="module" src="/funciones/funciones.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+</script>
+
 
 </html>
